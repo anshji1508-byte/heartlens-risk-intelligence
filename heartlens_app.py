@@ -242,6 +242,16 @@ div[data-testid="stMarkdownContainer"] .hero p{
     color:#ffffff!important;
 }
 </style>""",unsafe_allow_html=True)
+st.markdown("""<style>
+.stApp{
+    background-color:#081421!important;
+    background-image:linear-gradient(115deg,rgba(5,18,32,.96),rgba(9,45,65,.86),rgba(13,78,84,.82)),url("https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=2200&q=85")!important;
+    background-size:cover!important;
+    background-position:center!important;
+    background-attachment:fixed!important;
+}
+.stAppViewContainer{background:transparent!important}
+</style>""",unsafe_allow_html=True)
 st.markdown('<div class="hero"><span class="pill">MODEL-POWERED PREVENTIVE CARE</span><h1>HeartLens</h1><p>Explainable heart-disease risk intelligence for faster screening, smarter outreach, and more informed care conversations.</p></div>',unsafe_allow_html=True)
 
 with st.sidebar:
