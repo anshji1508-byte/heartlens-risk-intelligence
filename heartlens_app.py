@@ -201,6 +201,29 @@ section[data-testid="stSidebar"] [data-baseweb="select"] svg{
 .stTabs button[aria-selected="true"]{animation:tabPop .3s ease-out}
 .stTabs button *{background:transparent!important;color:#e8f0f7!important}
 .stTabs [data-baseweb="tab-highlight"]{background:#49c6b8!important;height:3px!important}
+.stTabs [role="tab"],
+.stTabs [role="tab"]:hover,
+.stTabs [role="tab"]:focus,
+.stTabs [role="tab"]:active,
+.stTabs button[data-baseweb="tab"],
+.stTabs button[data-baseweb="tab"]:hover,
+.stTabs button[data-baseweb="tab"]:focus,
+.stTabs button[data-baseweb="tab"]:active{
+    background-color:transparent!important;
+    background-image:none!important;
+    box-shadow:none!important;
+    outline:none!important;
+    border-color:transparent!important;
+    color:#e8f0f7!important;
+    -webkit-tap-highlight-color:transparent!important;
+}
+.stTabs [role="tab"][aria-selected="true"],
+.stTabs [role="tab"][aria-selected="true"]:hover,
+.stTabs [role="tab"][aria-selected="true"]:focus{
+    background-color:transparent!important;
+    color:#ffffff!important;
+    animation:tabPop .3s ease-out;
+}
 </style>""",unsafe_allow_html=True)
 st.markdown("""<style>
 div[data-testid="stMarkdownContainer"] .hero,
