@@ -270,7 +270,7 @@ if "profile" not in st.session_state or submitted: st.session_state.profile=make
 profile=st.session_state.profile; probability=float(model.predict_proba(profile)[0,1]); flag=probability>=threshold
 
 st.markdown('<div class="section-title">Risk command center</div>',unsafe_allow_html=True); st.markdown('<div class="muted">A probability estimate, operating threshold, and the evidence behind the prediction.</div>',unsafe_allow_html=True)
-c1,c2,c3,c4=st.columns(4); c1.metric("Risk probability",f"{probability:.1%}"); c2.metric("Decision threshold",f"{threshold:.2f}"); c3.metric("Model PR-AUC",f"{artifact['metrics']['pr_auc']:.3f}"); c4.metric("Model version",artifact["model_version"])
+c1,c2,c3,c4=st.columns(4); c1.metric("Risk probability",f"{probability:.1%}"); c2.metric("Decision threshold",f"{threshold:.2f}"); c3.metric("Model PR-AUC",f"{artifact['metrics']['pr_auc']:.3f}"); c4.metric("Features selected","31 / 39")
 if flag: st.markdown(f'<div class="risk-high"><b>Priority review flag</b><br>Estimated probability is {probability:.1%}, above the {threshold:.0%} operating threshold. Validate the measurements and consider timely clinical review.</div>',unsafe_allow_html=True)
 else: st.markdown(f'<div class="risk-low"><b>Lower-risk model output</b><br>Estimated probability is {probability:.1%}, below the {threshold:.0%} operating threshold. Continue routine prevention and monitoring.</div>',unsafe_allow_html=True)
 
