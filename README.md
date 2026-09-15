@@ -30,7 +30,7 @@ The threshold selected from training out-of-fold predictions is `0.63`.
 ## Run locally
 
 ```bash
-python -m pip install -r requirements_heartlens.txt
+python -m pip install -r requirements.txt
 python -m streamlit run heartlens_app.py
 ```
 
