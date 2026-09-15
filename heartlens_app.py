@@ -56,6 +56,8 @@ section[data-testid="stSidebar"] [data-baseweb="input"]>div{background:transpare
 section[data-testid="stSidebar"] [data-baseweb="select"]>div{background:transparent!important;border:1px solid #7fb4c5!important}
 section[data-testid="stSidebar"] [data-baseweb="select"] span{color:#17324d!important}
 section[data-testid="stSidebar"] [data-baseweb="slider"] [role="slider"]{background:#176b73!important;border-color:#176b73!important}
+section[data-testid="stSidebar"] [data-testid="InputInstructions"]{display:none!important}
+section[data-testid="stSidebar"] [data-testid="InputInstructions"] *{display:none!important}
 @keyframes heroIn{from{opacity:0;transform:translateY(-16px)}to{opacity:1;transform:translateY(0)}}
 @keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
 @keyframes softPulse{0%,100%{box-shadow:0 5px 20px #df5b6814}50%{box-shadow:0 8px 28px #df5b6840}}
@@ -242,7 +244,7 @@ st.markdown('<div class="hero"><span class="pill">MODEL-POWERED PREVENTIVE CARE<
 
 with st.sidebar:
     st.markdown("## Patient profile"); st.caption("Enter a profile to generate an explainable risk estimate.")
-    with st.form("patient_form"):
+    with st.form("patient_form",enter_to_submit=False):
         age=st.slider("Age",18,90,54); sex=st.selectbox("Sex",["Male","Female"])
         chest=st.selectbox("Chest pain type",["Asymptomatic","Non-Anginal Pain","Atypical Angina","Typical Angina"])
         smoker=st.selectbox("Smoking status",["Never","Former","Current"]); family=st.checkbox("Family history of heart disease")
