@@ -68,8 +68,13 @@ section[data-testid="stSidebar"] [data-baseweb="slider"] [role="slider"]{backgro
 .risk-low{animation:fadeUp .55s ease-out both}
 .stButton>button{transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
 .stButton>button:hover{transform:translateY(-2px);box-shadow:0 8px 18px #176b7340}
-.stTabs [data-baseweb="tab"]{transition:color .2s ease,background .2s ease,transform .2s ease}
-.stTabs [data-baseweb="tab"]:hover{transform:translateY(-2px);background:#d9f1ef}
+.stTabs [data-baseweb="tab"]{transition:none!important;transform:none!important}
+.stTabs [data-baseweb="tab"]:hover,
+.stTabs [data-baseweb="tab"]:focus,
+.stTabs [data-baseweb="tab"]:active{transform:none!important;background:#ffffff;color:#17324d!important}
+.stTabs [data-baseweb="tab"][aria-selected="true"],
+.stTabs [data-baseweb="tab"][aria-selected="true"]:hover,
+.stTabs [data-baseweb="tab"][aria-selected="true"]:focus{background:#176b73!important;color:#ffffff!important}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 </style>""",unsafe_allow_html=True)
 if night_mode:
@@ -96,7 +101,9 @@ if night_mode:
     [data-testid="stExpander"] summary svg{fill:#ffffff!important}
     .stTabs [data-baseweb="tab-list"]{background:#10293b}
     .stTabs [data-baseweb="tab"]{background:#18364a;color:#e8f0f7!important}
+    .stTabs [data-baseweb="tab"]:hover,.stTabs [data-baseweb="tab"]:focus,.stTabs [data-baseweb="tab"]:active{background:#18364a!important;color:#e8f0f7!important;transform:none!important}
     .stTabs [aria-selected="true"]{background:#27a99d!important;color:#ffffff!important}
+    .stTabs [data-baseweb="tab"][aria-selected="true"],.stTabs [data-baseweb="tab"][aria-selected="true"]:hover,.stTabs [data-baseweb="tab"][aria-selected="true"]:focus{background:#27a99d!important;color:#ffffff!important}
     .stTabs [data-baseweb="tab-panel"]{background:#10293b;border-color:#24465c;color:#e8f0f7}
     .stTabs [data-baseweb="tab-panel"] p{color:#e8f0f7!important}
     div[data-testid="stMarkdownContainer"] p,div[data-testid="stMarkdownContainer"] strong{color:#e8f0f7!important}
