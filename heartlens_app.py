@@ -178,6 +178,29 @@ section[data-testid="stSidebar"] [data-baseweb="select"] input{
 section[data-testid="stSidebar"] [data-baseweb="select"] svg{
     fill:#ffffff!important;
 }
+.stTabs [data-baseweb="tab-list"]{background:transparent!important}
+.stTabs [data-baseweb="tab"],
+.stTabs [data-baseweb="tab"]:hover,
+.stTabs [data-baseweb="tab"]:focus,
+.stTabs [data-baseweb="tab"]:active,
+.stTabs button,
+.stTabs button:hover,
+.stTabs button:focus,
+.stTabs button:active,
+.stTabs button[aria-selected="true"],
+.stTabs button:not([aria-selected="true"]),
+.stTabs button[aria-selected="true"]>div,
+.stTabs button[aria-selected="true"]>div>div,
+.stTabs button:not([aria-selected="true"])>div,
+.stTabs button:not([aria-selected="true"])>div>div{
+    background:transparent!important;
+    box-shadow:none!important;
+    transform:none!important;
+    color:#e8f0f7!important;
+}
+.stTabs button[aria-selected="true"]{animation:tabPop .3s ease-out}
+.stTabs button *{background:transparent!important;color:#e8f0f7!important}
+.stTabs [data-baseweb="tab-highlight"]{background:#49c6b8!important;height:3px!important}
 </style>""",unsafe_allow_html=True)
 st.markdown("""<style>
 div[data-testid="stMarkdownContainer"] .hero,
