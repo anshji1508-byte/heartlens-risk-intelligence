@@ -16,9 +16,11 @@ st.markdown("""<style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
 html,body,[class*="css"]{font-family:'DM Sans',sans-serif}.stApp{background:#f6f8fc}
 header[data-testid="stHeader"]{background:transparent!important;box-shadow:none!important}
-[data-testid="stToolbar"]{visibility:hidden!important;height:0!important}
+[data-testid="stToolbar"]{visibility:visible!important;height:auto!important;background:transparent!important}
 #MainMenu{visibility:hidden!important}
 footer{visibility:hidden!important}
+[data-testid="stSidebarCollapsedControl"]{visibility:visible!important;display:block!important;z-index:99999!important}
+[data-testid="stSidebarCollapsedControl"] button{visibility:visible!important;color:#49c6b8!important}
 .hero{position:relative;overflow:hidden;background:linear-gradient(120deg,#0b1f3a,#123e63 55%,#176b73);background-size:200% 200%;animation:heroIn .7s ease-out both,gradientFlow 10s ease infinite;padding:2.5rem 2.8rem;border-radius:24px;color:white;margin-bottom:1.4rem;box-shadow:0 14px 35px #0e2c4b2e}
 .hero h1{font-family:'Space Grotesk';font-size:2.6rem;margin:0 0 .4rem;letter-spacing:-.04em;color:#ffffff}.hero p{color:#ffffff!important;font-size:1.05rem;margin:0;max-width:760px}
 .pill{display:inline-block;padding:.35rem .8rem;border:1px solid #73d5d1;border-radius:999px;color:#9ce9e5;font-size:.78rem;margin-bottom:.9rem}
