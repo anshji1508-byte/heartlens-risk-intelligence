@@ -201,7 +201,8 @@ section[data-testid="stSidebar"] [data-baseweb="select"] svg{
 .stTabs button[aria-selected="true"]{animation:tabPop .3s ease-out}
 .stTabs button *{background:transparent!important;color:#e8f0f7!important}
 .stTabs [data-baseweb="tab-highlight"]{background:#49c6b8!important;height:3px!important}
-.signal-item{padding-left:1.25rem;margin:.55rem 0;color:#e8f0f7!important;line-height:1.55}
+.signals-spacer{height:2.35rem}
+.signal-item{padding-left:1.75rem;margin:.55rem 0;color:#e8f0f7!important;line-height:1.55}
 .signal-item b{color:#ffffff!important}
 .stTabs [role="tab"],
 .stTabs [role="tab"]:hover,
@@ -286,6 +287,7 @@ with left:
     fig,ax=plt.subplots(figsize=(8,4.8)); labels=top.Feature.str.replace("Numerical__","",regex=False).str.replace("Ohe__","",regex=False).str.replace("Ord__","",regex=False)
     ax.barh(labels,top.Contribution,color=["#df5b68" if x>0 else "#19a68d" for x in top.Contribution]); ax.axvline(0,color="#26364d",lw=1); ax.set_xlabel("SHAP contribution"); ax.grid(axis="x",alpha=.2); plt.tight_layout(); st.pyplot(fig,clear_figure=True)
 with right:
+    st.markdown("<div class='signals-spacer'></div>",unsafe_allow_html=True)
     st.markdown('<div class="section-title">Actionable signals</div>',unsafe_allow_html=True)
     for _,row in top.sort_values("Contribution",ascending=False).head(6).iterrows():
         direction="raises" if row.Contribution>0 else "reduces"
