@@ -22,7 +22,7 @@ footer{visibility:hidden!important}
 .hero{position:relative;overflow:hidden;background:linear-gradient(120deg,#0b1f3a,#123e63 55%,#176b73);background-size:200% 200%;animation:heroIn .7s ease-out both,gradientFlow 10s ease infinite;padding:2.5rem 2.8rem;border-radius:24px;color:white;margin-bottom:1.4rem;box-shadow:0 14px 35px #0e2c4b2e}
 .hero h1{font-family:'Space Grotesk';font-size:2.6rem;margin:0 0 .4rem;letter-spacing:-.04em;color:#ffffff}.hero p{color:#ffffff!important;font-size:1.05rem;margin:0;max-width:760px}
 .pill{display:inline-block;padding:.35rem .8rem;border:1px solid #73d5d1;border-radius:999px;color:#9ce9e5;font-size:.78rem;margin-bottom:.9rem}
-.section-title{font-family:'Space Grotesk';color:#0b1f3a;font-size:1.45rem;font-weight:700;margin:1.1rem 0 .2rem}.muted{color:#607089;font-size:.92rem}
+.section-title{font-family:'Space Grotesk';color:#0b1f3a;font-size:1.45rem;font-weight:700;margin:1.1rem 0 .2rem}.muted{color:#607089;font-size:.92rem;margin-bottom:1.5rem!important}
 .risk-high{background:#fff1f1;border-left:6px solid #e14b56;padding:1rem 1.2rem;border-radius:14px;color:#79242d}.risk-low{background:#ecfbf8;border-left:6px solid #17a68d;padding:1rem 1.2rem;border-radius:14px;color:#126353}
 .disclaimer{background:#fff8e8;border:1px solid #f1d28a;color:#6b4c13;border-radius:14px;padding:.9rem 1rem;font-size:.88rem}
 .stTabs [data-baseweb="tab-list"]{gap:8px;background:#eaf0f7;padding:6px;border-radius:12px}
