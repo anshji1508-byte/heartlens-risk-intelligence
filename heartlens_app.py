@@ -59,6 +59,7 @@ section[data-testid="stSidebar"] [data-baseweb="slider"] [role="slider"]{backgro
 @keyframes softPulse{0%,100%{box-shadow:0 5px 20px #df5b6814}50%{box-shadow:0 8px 28px #df5b6840}}
 @keyframes gradientFlow{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
 @keyframes floatOrb{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-18px,12px) scale(1.08)}}
+@keyframes tabPop{0%{transform:scale(.96);opacity:.75}60%{transform:scale(1.03)}100%{transform:scale(1);opacity:1}}
 .hero:after{content:"";position:absolute;width:180px;height:180px;border-radius:50%;right:8%;top:-80px;background:#73d5d133;filter:blur(2px);animation:floatOrb 6s ease-in-out infinite}
 .hero{animation:heroIn .7s ease-out both}
 .section-title,.stMetric,.stDataFrame,.stPlotlyChart,.element-container:has(.risk-high),.element-container:has(.risk-low){animation:fadeUp .55s ease-out both}
@@ -75,6 +76,10 @@ section[data-testid="stSidebar"] [data-baseweb="slider"] [role="slider"]{backgro
 .stTabs [data-baseweb="tab"][aria-selected="true"],
 .stTabs [data-baseweb="tab"][aria-selected="true"]:hover,
 .stTabs [data-baseweb="tab"][aria-selected="true"]:focus{background:#176b73!important;color:#ffffff!important}
+.stTabs button[aria-selected="true"]{background:#176b73!important;color:#ffffff!important;animation:tabPop .3s ease-out}
+.stTabs button[aria-selected="true"] *{color:#ffffff!important}
+.stTabs button:not([aria-selected="true"]){background:#ffffff!important;color:#17324d!important}
+.stTabs button:not([aria-selected="true"]):hover{background:#f4fbff!important;color:#17324d!important;transform:none!important}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 </style>""",unsafe_allow_html=True)
 if night_mode:
@@ -104,6 +109,10 @@ if night_mode:
     .stTabs [data-baseweb="tab"]:hover,.stTabs [data-baseweb="tab"]:focus,.stTabs [data-baseweb="tab"]:active{background:#18364a!important;color:#e8f0f7!important;transform:none!important}
     .stTabs [aria-selected="true"]{background:#27a99d!important;color:#ffffff!important}
     .stTabs [data-baseweb="tab"][aria-selected="true"],.stTabs [data-baseweb="tab"][aria-selected="true"]:hover,.stTabs [data-baseweb="tab"][aria-selected="true"]:focus{background:#27a99d!important;color:#ffffff!important}
+    .stTabs button[aria-selected="true"]{background:#27a99d!important;color:#ffffff!important;animation:tabPop .3s ease-out}
+    .stTabs button[aria-selected="true"] *{color:#ffffff!important}
+    .stTabs button:not([aria-selected="true"]){background:#18364a!important;color:#e8f0f7!important}
+    .stTabs button:not([aria-selected="true"]):hover{background:#21465c!important;color:#e8f0f7!important;transform:none!important}
     .stTabs [data-baseweb="tab-panel"]{background:#10293b;border-color:#24465c;color:#e8f0f7}
     .stTabs [data-baseweb="tab-panel"] p{color:#e8f0f7!important}
     div[data-testid="stMarkdownContainer"] p,div[data-testid="stMarkdownContainer"] strong{color:#e8f0f7!important}
