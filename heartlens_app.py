@@ -10,8 +10,8 @@ ROOT = Path(__file__).parent
 @st.cache_resource
 def load_artifact(): return joblib.load(ROOT / "heart_disease_model.joblib")
 artifact=load_artifact(); model,threshold=artifact["model"],artifact["threshold"]
-night_mode = st.sidebar.toggle("Night mode", value=st.session_state.get("night_mode", False))
-st.session_state.night_mode = night_mode
+# HeartLens uses a single permanent dark theme.
+night_mode = True
 st.markdown("""<style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
 html,body,[class*="css"]{font-family:'DM Sans',sans-serif}.stApp{background:#f6f8fc}
