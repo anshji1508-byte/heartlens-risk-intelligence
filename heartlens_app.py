@@ -201,6 +201,8 @@ section[data-testid="stSidebar"] [data-baseweb="select"] svg{
 .stTabs button[aria-selected="true"]{animation:tabPop .3s ease-out}
 .stTabs button *{background:transparent!important;color:#e8f0f7!important}
 .stTabs [data-baseweb="tab-highlight"]{background:#49c6b8!important;height:3px!important}
+.signal-item{padding-left:1.25rem;margin:.55rem 0;color:#e8f0f7!important;line-height:1.55}
+.signal-item b{color:#ffffff!important}
 .stTabs [role="tab"],
 .stTabs [role="tab"]:hover,
 .stTabs [role="tab"]:focus,
@@ -287,7 +289,7 @@ with right:
     st.markdown('<div class="section-title">Actionable signals</div>',unsafe_allow_html=True)
     for _,row in top.sort_values("Contribution",ascending=False).head(6).iterrows():
         direction="raises" if row.Contribution>0 else "reduces"
-        st.markdown(f"**{row.Feature.replace('Numerical__','').replace('Ohe__','').replace('Ord__','')}**  \n{direction.title()} the model score by {abs(row.Contribution):.3f} in this profile.")
+        st.markdown(f"<div class='signal-item'><b>{row.Feature.replace('Numerical__','').replace('Ohe__','').replace('Ord__','')}</b><br>{direction.title()} the model score by {abs(row.Contribution):.3f} in this profile.</div>",unsafe_allow_html=True)
 
 with st.expander("Patient profile and model notes"):
     st.dataframe(profile.T.rename(columns={0:"Value"}).astype(str),width="stretch")
