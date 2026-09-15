@@ -77,8 +77,13 @@ section[data-testid="stSidebar"] [data-baseweb="slider"] [role="slider"]{backgro
 .stTabs [data-baseweb="tab"][aria-selected="true"]:hover,
 .stTabs [data-baseweb="tab"][aria-selected="true"]:focus{background:#176b73!important;color:#ffffff!important}
 .stTabs button[aria-selected="true"]{background:#176b73!important;color:#ffffff!important;animation:tabPop .3s ease-out}
-.stTabs button[aria-selected="true"] *{color:#ffffff!important}
-.stTabs button:not([aria-selected="true"]){background:#ffffff!important;color:#17324d!important}
+.stTabs button[aria-selected="true"],
+.stTabs button[aria-selected="true"]>div,
+.stTabs button[aria-selected="true"]>div>div{background:#176b73!important;color:#ffffff!important}
+.stTabs button[aria-selected="true"] *{color:#ffffff!important;background:transparent!important}
+.stTabs button:not([aria-selected="true"]),
+.stTabs button:not([aria-selected="true"])>div,
+.stTabs button:not([aria-selected="true"])>div>div{background:#ffffff!important;color:#17324d!important}
 .stTabs button:not([aria-selected="true"]):hover{background:#f4fbff!important;color:#17324d!important;transform:none!important}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 </style>""",unsafe_allow_html=True)
@@ -110,8 +115,13 @@ if night_mode:
     .stTabs [aria-selected="true"]{background:#27a99d!important;color:#ffffff!important}
     .stTabs [data-baseweb="tab"][aria-selected="true"],.stTabs [data-baseweb="tab"][aria-selected="true"]:hover,.stTabs [data-baseweb="tab"][aria-selected="true"]:focus{background:#27a99d!important;color:#ffffff!important}
     .stTabs button[aria-selected="true"]{background:#27a99d!important;color:#ffffff!important;animation:tabPop .3s ease-out}
-    .stTabs button[aria-selected="true"] *{color:#ffffff!important}
-    .stTabs button:not([aria-selected="true"]){background:#18364a!important;color:#e8f0f7!important}
+    .stTabs button[aria-selected="true"],
+    .stTabs button[aria-selected="true"]>div,
+    .stTabs button[aria-selected="true"]>div>div{background:#27a99d!important;color:#ffffff!important}
+    .stTabs button[aria-selected="true"] *{color:#ffffff!important;background:transparent!important}
+    .stTabs button:not([aria-selected="true"]),
+    .stTabs button:not([aria-selected="true"])>div,
+    .stTabs button:not([aria-selected="true"])>div>div{background:#18364a!important;color:#e8f0f7!important}
     .stTabs button:not([aria-selected="true"]):hover{background:#21465c!important;color:#e8f0f7!important;transform:none!important}
     .stTabs [data-baseweb="tab-panel"]{background:#10293b;border-color:#24465c;color:#e8f0f7}
     .stTabs [data-baseweb="tab-panel"] p{color:#e8f0f7!important}
