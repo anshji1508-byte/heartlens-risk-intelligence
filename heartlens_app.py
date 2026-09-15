@@ -64,11 +64,13 @@ section[data-testid="stSidebar"] [data-testid="InputInstructions"] *{display:non
 @keyframes gradientFlow{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
 @keyframes floatOrb{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-18px,12px) scale(1.08)}}
 @keyframes tabPop{0%{transform:scale(.96);opacity:.75}60%{transform:scale(1.03)}100%{transform:scale(1);opacity:1}}
+@keyframes metricPop{0%{transform:scale(1)}45%{transform:scale(1.045) translateY(-5px)}100%{transform:scale(1.02) translateY(-3px)}}
 .hero:after{content:"";position:absolute;width:180px;height:180px;border-radius:50%;right:8%;top:-80px;background:#73d5d133;filter:blur(2px);animation:floatOrb 6s ease-in-out infinite}
 .hero{animation:heroIn .7s ease-out both}
 .section-title,.stMetric,.stDataFrame,.stPlotlyChart,.element-container:has(.risk-high),.element-container:has(.risk-low){animation:fadeUp .55s ease-out both}
 .stMetric{transition:transform .22s ease,box-shadow .22s ease;border-radius:14px;padding:.45rem}
 .stMetric:hover{transform:translateY(-4px);box-shadow:0 9px 24px #17324d1c}
+[data-testid="stMetric"]:hover{animation:metricPop .35s ease-out forwards;box-shadow:0 12px 28px #176b7340!important}
 .risk-high{animation:fadeUp .55s ease-out both,softPulse 2.8s ease-in-out 1s infinite}
 .risk-low{animation:fadeUp .55s ease-out both}
 .stButton>button{transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
