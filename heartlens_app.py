@@ -280,7 +280,7 @@ shap_df=pd.DataFrame({"Feature":names,"Contribution":values,"Magnitude":np.abs(v
 top=pd.concat([shap_df.nlargest(5,"Contribution"),shap_df.nsmallest(5,"Contribution")]).drop_duplicates().sort_values("Contribution")
 left,right=st.columns([1.2,1])
 with left:
-    st.markdown('<div class="section-title">Why this score?</div>',unsafe_allow_html=True); st.caption("Positive contributions push risk higher; negative contributions push it lower.")
+    st.markdown('<div class="section-title">Why this score</div>',unsafe_allow_html=True); st.caption("Positive contributions push risk higher; negative contributions push it lower.")
     fig,ax=plt.subplots(figsize=(8,4.8)); labels=top.Feature.str.replace("Numerical__","",regex=False).str.replace("Ohe__","",regex=False).str.replace("Ord__","",regex=False)
     ax.barh(labels,top.Contribution,color=["#df5b68" if x>0 else "#19a68d" for x in top.Contribution]); ax.axvline(0,color="#26364d",lw=1); ax.set_xlabel("SHAP contribution"); ax.grid(axis="x",alpha=.2); plt.tight_layout(); st.pyplot(fig,clear_figure=True)
 with right:
