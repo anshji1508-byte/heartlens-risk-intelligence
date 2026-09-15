@@ -204,8 +204,8 @@ section[data-testid="stSidebar"] [data-baseweb="select"] svg{
 .stTabs button *{background:transparent!important;color:#e8f0f7!important}
 .stTabs [data-baseweb="tab-highlight"]{background:#49c6b8!important;height:3px!important}
 .signals-spacer{height:2.35rem}
-.signals-title{padding-left:6rem}
-.signal-item{padding-left:6rem;margin:.55rem 0 .55rem 3rem;color:#e8f0f7!important;line-height:1.55}
+.signals-title{padding-left:clamp(.25rem,2vw,1.25rem);overflow-wrap:anywhere}
+.signal-item{padding-left:clamp(.25rem,2vw,1.25rem);margin:.55rem 0;max-width:100%;overflow-wrap:anywhere;word-break:break-word;color:#e8f0f7!important;line-height:1.55}
 .signal-item b{color:#ffffff!important}
 .stTabs [role="tab"],
 .stTabs [role="tab"]:hover,
